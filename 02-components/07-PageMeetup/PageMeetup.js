@@ -46,7 +46,7 @@ export default defineComponent({
           this.status = 'success';
           this.meetup = meetup;
         },(error) => {
-          this.status = error;
+          this.status = 'Test Error';
       });
     },
   },
