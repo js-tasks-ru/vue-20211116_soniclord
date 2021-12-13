@@ -68,7 +68,7 @@ export default defineComponent({
 
       <ui-container>
         <ui-alert v-if="status === 'load'">Загрузка...</ui-alert>
-        <ui-alert v-else> {{ status }}</ui-alert>
+        <ui-alert v-else-if="status === 'Test Error'"> {{ status }}</ui-alert>
       </ui-container>
 
     </div>`,
