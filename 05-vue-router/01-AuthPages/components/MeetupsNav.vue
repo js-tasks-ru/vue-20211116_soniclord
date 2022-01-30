@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
-    <a href="/login" class="nav__link">Вход</a>
-    <a href="/register" class="nav__link">Регистрация</a>
+    <router-link :to="{ name: 'PageLogin' }" class="nav__link">Вход</router-link>
+    <router-link :to="{ name: 'PageRegister' }" class="nav__link">Регистрация</router-link>
   </nav>
 </template>
 
@@ -19,7 +19,6 @@ export default {
   align-items: flex-start;
   margin-left: 24px;
 }
-
 .nav__link {
   font-size: 20px;
   line-height: 28px;
@@ -29,15 +28,12 @@ export default {
   position: relative;
   display: inline-flex;
 }
-
 .nav__link + .nav__link {
   margin-top: 8px;
 }
-
 .nav__link:hover {
   color: var(--blue);
 }
-
 .nav__link:before {
   content: '';
   position: absolute;
@@ -49,19 +45,16 @@ export default {
   border-radius: 50%;
   background-color: var(--grey);
 }
-
 @media all and (min-width: 992px) {
   .nav {
     flex-direction: row;
     align-items: center;
     margin-left: 0;
   }
-
   .nav__link,
   .nav__link + .nav__link {
     margin-top: 0;
   }
-
   .nav__link:first-child:before {
     display: none;
   }

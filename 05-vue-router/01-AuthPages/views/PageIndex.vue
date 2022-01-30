@@ -7,11 +7,8 @@
 
 <script>
 import UiContainer from '../components/UiContainer';
-
 export default {
   name: 'PageIndex',
   components: { UiContainer },
 };
 </script>
-
-<style></style>
