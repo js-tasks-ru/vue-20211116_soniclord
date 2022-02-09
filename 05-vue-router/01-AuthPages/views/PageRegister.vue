@@ -31,9 +31,13 @@
           </label>
         </ui-form-group>
         <div class="form__buttons">
-          <button type="submit" class="button button_primary">Зарегистрироваться</button>
+          <button type="submit" class="button button_primary" @click="handleSubmit">Зарегистрироваться</button>
         </div>
-        <div class="form__append">Уже есть аккаунт? <a href="/login" class="link">Войдите</a></div>
+        <div class="form__append">
+          Уже есть аккаунт?
+          <!-- <a href="/login" class="link">Войдите</a> -->
+          <router-link :to="{ name: 'PageLogin' }" class="link">Войдите</router-link>
+        </div>
       </form>
     </ui-container>
   </div>
@@ -42,21 +46,17 @@
 <script>
 import UiFormGroup from '../components/UiFormGroup';
 import UiContainer from '../components/UiContainer';
-
 export default {
   name: 'PageRegister',
-
   components: {
     UiFormGroup,
     UiContainer,
   },
-
   methods: {
     handleSubmit() {
       // Требуется обработать сабмит формы
+      this.$router.push({ name: 'PageLogin' });
     },
   },
 };
 </script>
-
-<style></style>

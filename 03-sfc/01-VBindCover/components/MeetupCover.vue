@@ -20,8 +20,8 @@ export default {
   computed: {
     imgLink(){
       return this.image ? `url('${this.image}')` : 'var(--default-cover)';
-    }
-  }
+    },
+  },
 };
 </script>
 
